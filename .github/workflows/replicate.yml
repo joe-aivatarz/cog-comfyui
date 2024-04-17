@@ -10,11 +10,8 @@ jobs:
 
     steps:
       - name: Maximize build space
-        uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 512
-          swap-size-mb: 1024
-          remove-dotnet: 'true'
+        uses: AdityaGarg8/remove-unwanted-software@v3
+
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup Cog
