@@ -25,12 +25,9 @@ jobs:
         with:
           token: ${{ secrets.REPLICATE_TOKEN }}
           install-cuda: false
-
-      - name: Download plugins
-        run: cog run scripts/clone_plugins.sh
-
       - name: Build Docker Image
         run: cog build -t comfyui-runner
-
+      - name: Download plugins
+        run: cog run scripts/clone_plugins.sh
       - name: Push to Replicate
         run: cog push r8.im/joe-aivatarz/comfyui-runner
