@@ -20,10 +20,17 @@ jobs:
           remove-large-packages: 'true'
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
       - name: Setup Cog
         uses: replicate/setup-cog@v1
         with:
           token: ${{ secrets.REPLICATE_TOKEN }}
           install-cuda: false
+          cog-version: "v0.8.6"
+#      - name: Build Docker Image
+#        run: cog build -t joe-aivatarz/comfyui-runner
+#      - name: Download plugins
+#        run: cog run scripts/clone_plugins.sh
       - name: Push to Replicate
-        run: cog push r8.im/joe-aivatarz/comfyui-runner
+        run: cog push 
