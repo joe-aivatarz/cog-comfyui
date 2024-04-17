@@ -33,4 +33,4 @@ jobs:
 #      - name: Download plugins
 #        run: cog run scripts/clone_plugins.sh
       - name: Push to Replicate
-        run: cog push 
+        run: cog push
