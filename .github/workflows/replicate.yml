@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Maximize build space
@@ -23,11 +23,11 @@ jobs:
         with:
           submodules: 'recursive'
       - name: Setup Cog
-        uses: replicate/setup-cog@v1
+        uses: replicate/setup-cog@v1.0.5
         with:
           token: ${{ secrets.REPLICATE_TOKEN }}
           install-cuda: false
-          cog-version: "v0.8.5"
+          cog-version: "v0.9.5"
       - name: Download plugins
         run: scripts/clone_plugins.sh
       - name: List Directories
