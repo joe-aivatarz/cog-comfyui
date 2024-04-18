@@ -77,5 +77,5 @@ build:
     - pip install onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
     - pwd
     - ls
-image: "r8.im/joe-aivatarz/comfyui-runner:latest"
+image: "r8.im/joe-aivatarz/comfyui-runner"
 predict: "predict.py:Predictor"
