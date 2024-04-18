@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Maximize build space
@@ -27,9 +27,9 @@ jobs:
         with:
           token: ${{ secrets.REPLICATE_TOKEN }}
           install-cuda: false
-          cog-version: "v0.8.6"
-      - name: Directories
-        run: pwd
+          cog-version: "v0.8.5"
+      - name: Download plugins
+        run: scripts/clone_plugins.sh
       - name: List Directories
         run: ls
       - name: Build Docker Image
