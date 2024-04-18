@@ -26,7 +26,7 @@ jobs:
         with:
           token: ${{ secrets.REPLICATE_TOKEN }}
           install-cuda: false
-          cog-version: "v0.9.5"
+          cog-version: "0aacc48"
       - name: Download plugins
         run: scripts/clone_plugins.sh
       - name: Build Docker Image
