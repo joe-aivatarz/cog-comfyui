@@ -29,8 +29,8 @@ jobs:
           cog-version: "v0.9.5"
       - name: Download plugins
         run: scripts/clone_plugins.sh
-#      - name: Build Docker Image
-#        run: cog build -t joe-aivatarz/comfyui-runner
+      - name: Build Docker Image
+        run: cog build -t joe-aivatarz/comfyui-runner:latest
 #      - name: Download plugins
 #        run: cog run scripts/clone_plugins.sh
       - name: Push to Replicate
